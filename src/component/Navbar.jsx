@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone, Mail, Facebook, Linkedin } from "lucide-react";
+import BaryaLogo from "../image/blogo.png"; // Ensure you have a logo image in the specified path
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,7 +38,14 @@ function Navbar() {
       {/* 🔹 Main Navbar */}
       <nav className="bg-white px-6 py-4 flex justify-between items-center relative">
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-blue-900">Barya HR</h1>
+     <div className="flex items-center gap-2">
+      <img 
+        src={BaryaLogo} 
+        alt="Barya HR Logo" 
+        className="h-15 w-30 object-contain"
+      />
+      <h1 className="text-2xl font-bold text-blue-900">Barya HR Services</h1>
+    </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 items-center text-lg text-gray-700">

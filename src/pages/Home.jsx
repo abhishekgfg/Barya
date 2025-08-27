@@ -160,10 +160,10 @@ function Home() {
     </section>
 
       {/* 🔹 Call to Action */}
-      <section className="relative bg-blue-900 text-white py-24 overflow-hidden">
+      <section className="relative bg-white-900 text-blue-900 py-24 overflow-hidden">
       {/* Background decorative shapes */}
-      <div className="absolute -top-20 -left-20 w-72 h-72 bg-blue-600 rounded-full opacity-20 animate-pulse"></div>
-      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-purple-600 rounded-full opacity-15 animate-pulse"></div>
+      <div className="absolute -top-20 -left-20 w-72 h-72 bg-blue-600 rounded-full opacity-20 "></div>
+      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-purple-600 rounded-full opacity-15 "></div>
 
       <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
         {/* Heading */}
@@ -179,7 +179,7 @@ function Home() {
 
         {/* Subtext */}
         <motion.p
-          className="text-lg md:text-xl mb-10 text-gray-100 max-w-2xl mx-auto"
+          className="text-lg md:text-xl mb-10 text-blue-900 max-w-2xl mx-auto"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -197,17 +197,17 @@ function Home() {
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
-          <button className="bg-white text-blue-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition transform hover:scale-105">
+          <button className="bg-blue text-blue-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition transform hover:scale-105">
             Contact Us
           </button>
-          <button className="border-2 border-white text-white font-semibold px-8 py-3 rounded-lg hover:bg-white hover:text-blue-900 transition transform hover:scale-105">
-            Learn More
+          <button className="bg-blue-9000 text-blue-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition transform hover:scale-105">
+            careers
           </button>
         </motion.div>
 
         {/* Small CTA note */}
         <motion.p
-          className="mt-6 text-gray-200 text-sm"
+          className="mt-6 text-blue-900 text-sm"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
