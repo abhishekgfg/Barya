@@ -26,25 +26,35 @@ export default function Footer() {
 
       <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Left section */}
-        <div>
-          <h1 className="text-2xl font-bold mb-2">Barya HR</h1>
-          <p className="mb-4">
-            Empowering physicians with advanced multi-modal tools to improve treatment selection and patient outcomes.
-          </p>
-          <div className="flex space-x-4 mb-4">
-            <a href="https://twitter.com" target="_blank" rel="noreferrer"><FaTwitter /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram /></a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebookF /></a>
-          </div>
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="border border-white px-4 py-2 text-sm hover:bg-white hover:text-blue-900 transition"
-          >
-            ↑ Back to Top
-          </button>
-        </div>
+     <div>
+  <div className="flex items-center  space-x-3 mb-3">
+    <img
+      src="/src/image/blogo.png" // ✅ update path to your logo
+      alt="Barya HR Logo"
+      className="h-15 w-15 object-contain bg-white p-2 rounded-full"
+    />
+    <h1 className="text-2xl font-bold">Barya HR Services</h1>
+  </div>
 
+  <p className="mb-4 text-gray-200 text-sm leading-relaxed">
+    Empowering physicians with advanced multi-modal tools to improve 
+    treatment selection and patient outcomes.
+  </p>
+
+  <div className="flex space-x-4 mb-4 text-xl">
+    <a href="https://twitter.com" target="_blank" rel="noreferrer"><FaTwitter /></a>
+    <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
+    <a href="https://www.instagram.com/baryahrservices?igsh=MXM0NnJjeDl2aGdxdw%3D%3D&utm_source=qr" target="_blank" rel="noreferrer"><FaInstagram /></a>
+    <a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebookF /></a>
+  </div>
+
+  <button
+    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+    className="border border-white px-4 py-2 text-sm hover:bg-white hover:text-blue-900 transition rounded-lg"
+  >
+    ↑ Back to Top
+  </button>
+</div>
         {/* Middle: Site Map */}
         <div>
           <h2 className="font-semibold mb-2">Site Map</h2>
@@ -54,7 +64,7 @@ export default function Footer() {
             <li><Link to="/services" className="hover:underline">Services</Link></li>
             <li><Link to="/careers" className="hover:underline">Careers</Link></li>
             <li><Link to="/contact" className="hover:underline">Contact</Link></li>
-            <li><Link to="/" className="hover:underline">Portal</Link></li>
+            
           </ul>
         </div>
 
@@ -62,9 +72,9 @@ export default function Footer() {
         <div>
           <h2 className="font-semibold mb-2">Legal</h2>
           <ul className="space-y-1">
-            <li><Link to="/" className="hover:underline">Privacy Policy</Link></li>
-            <li><Link to="/" className="hover:underline">Terms of Services</Link></li>
-            <li><Link to="/" className="hover:underline">Lawyer’s Corner</Link></li>
+            <li><Link to="/privacy-policy" className="hover:underline">Privacy Policy</Link></li>
+            <li><Link to="/term-service" className="hover:underline">Terms of Services</Link></li>
+            
           </ul>
         </div>
       </div>

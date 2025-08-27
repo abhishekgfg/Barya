@@ -3,6 +3,8 @@ import Services from "./Services";
 import { motion } from "framer-motion";
 import WhyChooseUs from "./WhyChooseUs";
 import { FaBuilding } from "react-icons/fa";
+import VisionMissionSection from "./VisionMissionSection";
+import { Link } from "react-router-dom";
 
 function Home() {
      const features = [
@@ -83,22 +85,24 @@ function Home() {
       About BARYA HR SERVICES 
       </h2>
       <p className="text-gray-600 leading-relaxed mb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum.
+    <strong>  BARYA HR SERVICES</strong> is a professional recruitment and manpower consultancy
+       committed to delivering efficient,reliable, and customized HR solutions.
+        With a growing network of qualified candidates and industry-focused recruitment 
+        strategies, we aim to be the trusted bridge between talent and opportunity.
       </p>
-      <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 rounded-md shadow">
-        Apply Now
-      </button>
+       <a
+  href="https://wa.me/919773784887?text=Hello%20Barya%20HR%20Services%2C%20I%20would%20like%20to%20apply.%20Here%20are%20my%20details%3A%0AName%3A%20%0AExperience%3A%20%0ASkills%3A%20%0AInterested%20Role%3A%20"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="ml-4 border-2 border-green-600 text-green-600 px-4 py-2 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition"
+>
+  WhatsApp Apply
+</a>
     </div>
   </div>
 </section>
 
-
+<VisionMissionSection />
       {/* 🔹 Our Services */}
      <Services />  
       <WhyChooseUs />
@@ -120,15 +124,24 @@ function Home() {
           transition={{ duration: 0.8 }}
         >
         <h1 className="text-5xl font-bold text-blue-900 mb-6 -mt-7">
-  Our Valued Clients
+ Your Journey with Barya Starts Now
 </h1>
 
           <p className="text-gray-700 mb-6 text-lg">
-            Barya HR Services partners with top companies across industries to deliver exceptional recruitment and staffing solutions. We take pride in our long-term relationships and proven success.
+           Whether you're a jobseeker looking for the right opportunity or a professional aiming to upgrade your career, Barya HR Services is your trusted partner every step of the way. Let’s build your career together — with purpose, passion, and the right guidance.
           </p>
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition transform hover:scale-105 w-40">
-            Work With Us
-          </button>
+         <button
+  onClick={() =>
+    window.open(
+      "https://wa.me/919773784887?text=Hello%20Barya%20HR%20Services%2C%20I%20am%20interested%20to%20work%20with%20you.",
+      "_blank"
+    )
+  }
+  className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition transform hover:scale-105 w-40"
+>
+  Work With Us
+</button>
+
         </motion.div>
 
         {/* Right Side Client Cards */}
@@ -174,7 +187,7 @@ function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          Ready to Hire the Best Talent?
+         Your Journey with Barya Starts Now
         </motion.h2>
 
         {/* Subtext */}
@@ -185,8 +198,9 @@ function Home() {
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-          Connect with us today and discover customized HR solutions tailored for your business needs. 
-          Find the right talent quickly and efficiently with Barya HR Services.
+         Whether you're a jobseeker looking for the right opportunity or a professional aiming to upgrade your career,
+          Barya HR Services is your trusted partner every step of the way. 
+         Let’s build your career together — with purpose, passion, and the right guidance.
         </motion.p>
 
         {/* Buttons */}
@@ -197,12 +211,19 @@ function Home() {
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
-          <button className="bg-blue text-blue-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition transform hover:scale-105">
-            Contact Us
-          </button>
-          <button className="bg-blue-9000 text-blue-900 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition transform hover:scale-105">
-            careers
-          </button>
+        <div className="flex gap-4">
+  <Link to="/contact">
+    <button className="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition transform hover:scale-105">
+      Contact Us
+    </button>
+  </Link>
+
+  <Link to="/careers">
+    <button className="bg-blue-900 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-800 transition transform hover:scale-105">
+      Careers
+    </button>
+  </Link>
+</div>
         </motion.div>
 
         {/* Small CTA note */}

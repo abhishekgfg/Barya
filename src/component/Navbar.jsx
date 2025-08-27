@@ -11,12 +11,20 @@ function Navbar() {
       {/* 🔹 Top Bar */}
       <div className="bg-blue-900 text-sm text-white px-6 py-2 hidden md:flex justify-between items-center">
         <div className="flex items-center gap-6">
-          <span className="flex items-center gap-2">
-            <Phone size={16} /> +91 - 9990316499
-          </span>
-          <span className="flex items-center gap-2">
-            <Mail size={16} /> info@baryahr.com
-          </span>
+          <a 
+  href="tel:+919773784887" 
+  className="flex items-center gap-2 hover:text-blue-600 transition"
+>
+  <Phone size={16} /> +91 - 9773784887
+</a>
+
+         <a 
+  href="mailto:baryahrservices@gmail.com" 
+  className="flex items-center gap-2 hover:text-blue-600 transition"
+>
+  <Mail size={16} /> baryahrservices@gmail.com
+</a>
+
         </div>
 
         <div className="flex items-center gap-6">
@@ -46,12 +54,16 @@ function Navbar() {
           <Link to="/services" className="hover:text-blue-900">Services</Link>
           <Link to="/careers" className="hover:text-blue-900">Careers</Link>
           <Link to="/contact" className="hover:text-blue-900">Contact Us</Link>
-          <Link
-            to="/apply"
-            className="ml-4 border-2 border-blue-900 text-blue-900 px-4 py-2 rounded-lg font-semibold hover:bg-blue-900 hover:text-white transition"
-          >
-            Apply Now
-          </Link>
+  <a
+  href="https://wa.me/919773784887?text=Hello%20Barya%20HR%20Services%2C%20I%20would%20like%20to%20apply.%20Here%20are%20my%20details%3A%0AName%3A%20%0AExperience%3A%20%0ASkills%3A%20%0AInterested%20Role%3A%20"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="ml-4 border-2 border-green-600 text-green-600 px-4 py-2 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition"
+>
+  WhatsApp Apply
+</a>
+
+
         </div>
 
         {/* Mobile Menu Button */}

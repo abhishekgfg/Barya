@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Users, Briefcase, Star } from "lucide-react";
+import VisionMissionSection from "./VisionMissionSection";
 
 export default function About() {
   const statsData = [
@@ -63,9 +64,10 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          We are a trusted HR consultancy firm dedicated to providing skilled employees to businesses across industries. 
-          Our mission is to bridge the gap between employers and job seekers by delivering effective recruitment, staffing, 
-          and HR consulting solutions. We believe in building long-term relationships and empowering organizations with the right talent.
+        <strong> BARYA HR Services </strong>is a professional recruitment and manpower
+          consultancy committed to delivering efficient, reliable, and customized HR solutions.
+        With a growing network of qualified candidates and industry-focused recruitment strategies, 
+        we aim to be the trusted bridge between talent and opportunity.
         </motion.p>
 
         {/* Stats with Animated Count */}
@@ -91,6 +93,7 @@ export default function About() {
         {/* More Details Section */}
        
       </div>
+      <VisionMissionSection />
     </section>
   );
 }

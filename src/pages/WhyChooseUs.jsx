@@ -2,28 +2,29 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaUsers, FaBriefcase, FaStar, FaHandshake } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 // Features data
 const features = [
   {
     icon: <FaUsers className="w-8 h-8 text-blue-600 mb-4" />,
-    title: "Experienced Team",
-    description: "Our skilled professionals ensure top-notch recruitment solutions for your company.",
+    title: "People-First Culture",
+    description: "We believe that our people are our greatest asset. At Barya, you’ll be part of a supportive, inclusive, and forward-thinking team where your voice matters, your ideas are valued, and your growth is prioritized.",
   },
   {
     icon: <FaBriefcase className="w-8 h-8 text-green-600 mb-4" />,
-    title: "Industry Expertise",
-    description: "We understand your industry needs and deliver tailored staffing solutions.",
+    title: "Diverse Opportunities",
+    description: "Barya HR Services connects you to diverse opportunities — from entry-level to executive — across IT, finance, healthcare, logistics, and more",
   },
   {
     icon: <FaStar className="w-8 h-8 text-yellow-500 mb-4" />,
-    title: "Proven Results",
-    description: "Our clients have achieved remarkable success with our HR strategies.",
+    title: "Career Development & Training",
+    description: "Your career growth is important to us. We offer skill-building programs, soft-skill workshops, interview coaching, and ongoing mentorship to ensure you're always one step ahead in a competitive job market.",
   },
   {
     icon: <FaHandshake className="w-8 h-8 text-purple-600 mb-4" />,
-    title: "Client Satisfaction",
-    description: "Building long-term relationships with businesses and employees is our priority.",
+    title: "Ethical & Transparent Recruitment",
+    description: "Integrity is the foundation of everything we do. We are committed to fair hiring practices, clear communication, and building long-term relationships with both candidates and clients.",
   },
 ];
 
@@ -43,7 +44,7 @@ export default function WhyChooseUs() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          Why Choose Us?
+          Why Choose a Career with Barya?
         </motion.h2>
 
         {/* Subheading / description */}
@@ -54,8 +55,10 @@ export default function WhyChooseUs() {
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
-          Barya HR Services is committed to connecting the right talent with the right companies. 
-          Our expertise ensures businesses thrive while employees find meaningful opportunities.
+          At <strong>Barya HR Services</strong>, we don’t just offer jobs — we shape futures. 
+          As one of the leading HR consultancy and workforce solutions providers,
+           we are committed to connecting ambitious professionals with career-defining
+            opportunities across diverse industries.
         </motion.p>
 
         {/* Features grid */}
@@ -85,9 +88,11 @@ export default function WhyChooseUs() {
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.7 }}
         >
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition transform hover:scale-105">
-            Contact Us
-          </button>
+         <Link to="/contact">
+  <button className="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition transform hover:scale-105">
+    Contact Us
+  </button>
+</Link>
         </motion.div>
       </div>
     </section>
