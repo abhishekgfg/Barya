@@ -191,54 +191,55 @@ export default function VisionMissionSection() {
               </motion.div>
 
               {/* Mission floating pill */}
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.15 }}
-                className="mt-4"
-              >
-                <div className="bg-gradient-to-r from-white/80 via-white/60 to-white/80 p-4 rounded-2xl border border-slate-100 shadow-lg backdrop-blur-md">
-                  <div className="text-xs text-slate-500">Our Mission</div>
-                  <div className="mt-1 text-slate-800 font-semibold">
-                    To connect organizations with the right talent through a
-                    transparent, efficient, and client-centric process.
-                  </div>
-
-                  <ul className="mt-3 space-y-2 text-slate-600 text-sm">
-                    <li>
-                      • Deliver high-quality manpower solutions that help
-                      clients grow and thrive.
-                    </li>
-                    <li>
-                      • Maintain compliance, diversity, and professionalism in
-                      every placement.
-                    </li>
-                    <li>
-                      • Build long-term partnerships with clear communication
-                      and measurable outcomes.
-                    </li>
-                  </ul>
-
-                  <div className="mt-4 flex items-center gap-3">
-                   <a
-  href="https://wa.me/919773784887?text=Hello%20Barya%20HR%20Services%2C%20I%20would%20like%20to%20talk%20to%20an%20expert%20regarding%20your%20services."
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full font-medium shadow-sm hover:bg-green-100 transition"
+            <motion.div
+  initial={{ opacity: 0, x: 0, y: 40 }} // default for mobile (fade up)
+  whileInView={{ opacity: 1, x: 0, y: 0 }}
+  transition={{ delay: 0.15 }}
+  viewport={{ once: true }}
+  className="mt-4 md:mt-6"
 >
-  Talk to an Expert
-</a>
+  <div className="bg-gradient-to-r from-white/80 via-white/60 to-white/80 p-4 rounded-2xl border border-slate-100 shadow-lg backdrop-blur-md">
+    <div className="text-xs text-slate-500">Our Mission</div>
+    <div className="mt-1 text-slate-800 font-semibold">
+      To connect organizations with the right talent through a
+      transparent, efficient, and client-centric process.
+    </div>
 
+    <ul className="mt-3 space-y-2 text-slate-600 text-sm">
+      <li>
+        • Deliver high-quality manpower solutions that help
+        clients grow and thrive.
+      </li>
+      <li>
+        • Maintain compliance, diversity, and professionalism in
+        every placement.
+      </li>
+      <li>
+        • Build long-term partnerships with clear communication
+        and measurable outcomes.
+      </li>
+    </ul>
 
-                    <a
-                      href="#about"
-                      className="inline-flex items-center gap-2 text-slate-600 px-3 py-2 rounded-full font-medium"
-                    >
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
+    <div className="mt-4 flex items-center gap-3 flex-wrap">
+      <a
+        href="https://wa.me/919773784887?text=Hello%20Barya%20HR%20Services%2C%20I%20would%20like%20to%20talk%20to%20an%20expert%20regarding%20your%20services."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full font-medium shadow-sm hover:bg-green-100 transition"
+      >
+        Talk to an Expert
+      </a>
+
+      <a
+        href="#about"
+        className="inline-flex items-center gap-2 text-slate-600 px-3 py-2 rounded-full font-medium"
+      >
+        Learn More
+      </a>
+    </div>
+  </div>
+</motion.div>
+
             </div>
           </motion.div>
         </motion.div>
